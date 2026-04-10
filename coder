@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- FORM -->
+    <div class="form">
+      <h2>Enter Your Details</h2>
+
+      <input type="text" id="name" placeholder="Full Name">
+      <input type="text" id="title" placeholder="Job Title">
+      <input type="email" id="email" placeholder="Email">
+      <input type="text" id="phone" placeholder="Phone">
+
+      <textarea id="summary" placeholder="Profile Summary"></textarea>
+      <textarea id="skills" placeholder="Skills (comma separated)"></textarea>
+      <textarea id="education" placeholder="Education"></textarea>
+      <textarea id="experience" placeholder="Experience"></textarea>
+
+      <button onclick="generateResume()">Generate Resume</button>
+      <button onclick="downloadPDF()">Download PDF</button>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview" id="resume">
+      <h1 id="p_name">Your Name</h1>
+      <h3 id="p_title">Job Title</h3>
+      <p id="p_contact">Email | Phone</p>
+
+      <h2>Summary</h2>
+      <p id="p_summary"></p>
+
+      <h2>Skills</h2>
+      <p id="p_skills"></p>
+
+      <h2>Education</h2>
+      <p id="p_education"></p>
+
+      <h2>Experience</h2>
+      <p id="p_experience"></p>
+    </div>
+
+  </div>
+
+  <!-- PDF LIBRARY -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
